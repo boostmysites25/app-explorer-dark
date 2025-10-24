@@ -1,11 +1,13 @@
 import ProductCard, { Product } from "./ProductCard";
+import useScrollAnimation from "@/hooks/use-scroll-animation";
 
 interface ProductGridProps {
   products: Product[];
-  onProductClick: (product: Product) => void;
 }
 
-const ProductGrid = ({ products, onProductClick }: ProductGridProps) => {
+const ProductGrid = ({ products }: ProductGridProps) => {
+  const gridRef = useScrollAnimation();
+
   if (products.length === 0) {
     return (
       <div className="container mx-auto px-4 py-16">
@@ -18,13 +20,21 @@ const ProductGrid = ({ products, onProductClick }: ProductGridProps) => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-        {products.map((product) => (
-          <ProductCard 
-            key={product.id} 
-            product={product} 
-            onClick={onProductClick}
-          />
+      <div 
+        ref={gridRef.ref}
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ${
+          gridRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
+        }`}
+      >
+        {products.map((product, index) => (
+          <div
+            key={product.id}
+            className={`transition-all duration-700 ${
+              gridRef.isVisible ? `animate-scale-in animate-stagger-${(index % 6) + 1}` : 'scroll-hidden-scale'
+            }`}
+          >
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </div>

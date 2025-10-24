@@ -1,32 +1,27 @@
 import { useState } from "react";
 import CategoryFilter from "@/components/CategoryFilter";
 import ProductGrid from "@/components/ProductGrid";
-import ProductDetailModal from "@/components/ProductDetailModal";
-import { Product } from "@/components/ProductCard";
 import { mockProducts, categories } from "@/data/products";
+import useScrollAnimation from "@/hooks/use-scroll-animation";
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const headerRef = useScrollAnimation();
+  const filterRef = useScrollAnimation();
+  const gridRef = useScrollAnimation();
 
   const filteredProducts = activeCategory === "All" 
     ? mockProducts 
     : mockProducts.filter(product => product.category === activeCategory);
 
-  const handleProductClick = (product: Product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedProduct(null);
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <header 
+        ref={headerRef.ref}
+        className={`border-b border-border bg-card transition-all duration-700 ${
+          headerRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
+        }`}
+      >
         <div className="container mx-auto px-4 py-6">
           <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Software Marketplace
@@ -37,22 +32,29 @@ const Index = () => {
         </div>
       </header>
 
-      <CategoryFilter 
-        categories={categories}
-        activeCategory={activeCategory}
-        onCategoryChange={setActiveCategory}
-      />
+      <div 
+        ref={filterRef.ref}
+        className={`transition-all duration-700 ${
+          filterRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+        }`}
+      >
+        <CategoryFilter 
+          categories={categories}
+          activeCategory={activeCategory}
+          onCategoryChange={setActiveCategory}
+        />
+      </div>
 
-      <ProductGrid 
-        products={filteredProducts}
-        onProductClick={handleProductClick}
-      />
-
-      <ProductDetailModal 
-        product={selectedProduct}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
+      <div 
+        ref={gridRef.ref}
+        className={`transition-all duration-700 ${
+          gridRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
+        }`}
+      >
+        <ProductGrid 
+          products={filteredProducts}
+        />
+      </div>
     </div>
   );
 };
