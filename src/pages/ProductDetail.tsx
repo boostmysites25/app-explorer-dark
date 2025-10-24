@@ -1,24 +1,33 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Star, Users, Calendar, Shield, Zap, TrendingUp } from "lucide-react";
+import { ArrowLeft, Star, Users, Calendar, Shield, Zap, TrendingUp, Target, DollarSign, TrendingUp as TrendingUpIcon, Code, Lightbulb, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { mockProducts } from "@/data/products";
-import { Product } from "@/components/ProductCard";
+import { mockProducts, DetailedProduct } from "@/data/products";
 import useScrollAnimation from "@/hooks/use-scroll-animation";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   
-  const product: Product | undefined = mockProducts.find(
+  const product: DetailedProduct | undefined = mockProducts.find(
     (p) => p.id === parseInt(id || "0")
   );
 
   // Scroll animation hooks
   const heroRef = useScrollAnimation();
-  const aboutRef = useScrollAnimation();
+  const overviewRef = useScrollAnimation();
+  const problemRef = useScrollAnimation();
+  const solutionRef = useScrollAnimation();
   const featuresRef = useScrollAnimation();
+  const marketRef = useScrollAnimation();
+  const monetizationRef = useScrollAnimation();
+  const roiRef = useScrollAnimation();
+  const fundingRef = useScrollAnimation();
+  const techRef = useScrollAnimation();
+  const competitiveRef = useScrollAnimation();
+  const budgetRef = useScrollAnimation();
+  const visionRef = useScrollAnimation();
   const sidebarRef = useScrollAnimation();
 
   if (!product) {
@@ -45,7 +54,7 @@ const ProductDetail = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 overflow-x-hidden">
       {/* Hero Section */}
       <div 
-        ref={heroRef.ref}
+        ref={heroRef.ref as React.RefObject<HTMLDivElement>}
         className={`relative overflow-hidden transition-all duration-700 ${
           heroRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
         }`}
@@ -73,7 +82,10 @@ const ProductDetail = () => {
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent leading-tight">
                   {product.title}
                 </h1>
-                <p className="text-xl text-muted-foreground mt-4 leading-relaxed">
+                <p className="text-xl text-muted-foreground mt-2 leading-relaxed">
+                  {product.tagline}
+                </p>
+                <p className="text-lg text-muted-foreground mt-2">
                   Premium AI-powered solution by {product.author}
                 </p>
               </div>
@@ -122,31 +134,83 @@ const ProductDetail = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="xl:col-span-2 space-y-8">
-            {/* About Section */}
+            {/* Overview Section */}
             <div
-              ref={aboutRef.ref}
+              ref={overviewRef.ref as React.RefObject<HTMLDivElement>}
               className={`transition-all duration-700 ${
-                aboutRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+                overviewRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
               }`}
             >
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold">📋</span>
+                      <Eye className="w-5 h-5 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold">About This Product</h2>
+                    <h2 className="text-2xl font-bold">Overview</h2>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    {product.description}
+                    {product.overview}
                   </p>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Features Section */}
+            {/* Problem Section */}
             <div
-              ref={featuresRef.ref}
+              ref={problemRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                problemRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold">⚠️</span>
+                    </div>
+                    <h2 className="text-2xl font-bold">The Problem</h2>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    {product.problem}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Solution Section */}
+            <div
+              ref={solutionRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                solutionRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <Lightbulb className="w-5 h-5 text-white" />
+                    </div>
+                    <h2 className="text-2xl font-bold">The Solution</h2>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    {product.solution}
+                  </p>
+                  {product.howItWorks && (
+                    <div className="mt-6 p-4 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl border border-primary/10">
+                      <h3 className="font-semibold text-lg mb-3">How It Works:</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {product.howItWorks}
+                      </p>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Core Features Section */}
+            <div
+              ref={featuresRef.ref as React.RefObject<HTMLDivElement>}
               className={`transition-all duration-700 ${
                 featuresRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
               }`}
@@ -157,10 +221,10 @@ const ProductDetail = () => {
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold">✨</span>
                     </div>
-                    <h2 className="text-2xl font-bold">Key Features</h2>
+                    <h2 className="text-2xl font-bold">Core Features</h2>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {product.features.map((feature, index) => (
+                    {product.coreFeatures.map((feature, index) => (
                       <div 
                         key={index} 
                         className={`group flex items-start gap-4 p-4 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl border border-primary/10 hover:border-primary/20 transition-all duration-300 hover:shadow-md animate-stagger-${(index % 6) + 1}`}
@@ -175,10 +239,432 @@ const ProductDetail = () => {
                 </CardContent>
               </Card>
             </div>
+
+            {/* Target Users Section */}
+            {product.targetUsers && (
+              <div
+                ref={marketRef.ref as React.RefObject<HTMLDivElement>}
+                className={`transition-all duration-700 ${
+                  marketRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+                }`}
+              >
+                <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                  <CardContent className="p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                        <Target className="w-5 h-5 text-white" />
+                      </div>
+                      <h2 className="text-2xl font-bold">Target Users</h2>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      {product.targetUsers}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {/* Market Opportunity Section */}
+            <div
+              ref={marketRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                marketRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <TrendingUpIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <h2 className="text-2xl font-bold">Market Opportunity</h2>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    {product.marketOpportunity}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Monetization Model Section */}
+            <div
+              ref={monetizationRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                monetizationRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <DollarSign className="w-5 h-5 text-white" />
+                    </div>
+                    <h2 className="text-2xl font-bold">Monetization Model</h2>
+                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">Plans</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {product.monetizationModel.plans.map((plan, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground">{plan}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">Pricing</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {product.monetizationModel.pricing.map((price, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground">{price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {product.monetizationModel.revenue && (
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Revenue Projections</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {product.monetizationModel.revenue.map((revenue, index) => (
+                            <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground">{revenue}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* ROI Projection Section */}
+            <div
+              ref={roiRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                roiRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <TrendingUp className="w-5 h-5 text-white" />
+                    </div>
+                    <h2 className="text-2xl font-bold">ROI & Financial Projection</h2>
+                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">Timeline</h3>
+                      <div className="space-y-2">
+                        {product.roiProjection.timeline.map((item, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">Projections</h3>
+                      <div className="space-y-2">
+                        {product.roiProjection.projections.map((projection, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground">{projection}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {product.roiProjection.userROI && (
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">User ROI</h3>
+                        <div className="space-y-2">
+                          {product.roiProjection.userROI.map((roi, index) => (
+                            <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground">{roi}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Funding Opportunities Section */}
+            {product.fundingOpportunities && (
+              <div
+                ref={fundingRef.ref as React.RefObject<HTMLDivElement>}
+                className={`transition-all duration-700 ${
+                  fundingRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+                }`}
+              >
+                <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                  <CardContent className="p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                        <span className="text-white font-bold">💰</span>
+                      </div>
+                      <h2 className="text-2xl font-bold">Funding Opportunities</h2>
+                    </div>
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Stages</h3>
+                        <div className="space-y-2">
+                          {product.fundingOpportunities.stages.map((stage, index) => (
+                            <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground">{stage}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Amounts</h3>
+                        <div className="space-y-2">
+                          {product.fundingOpportunities.amounts.map((amount, index) => (
+                            <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground">{amount}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      {product.fundingOpportunities.valuations && (
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-foreground">Valuations</h3>
+                          <div className="space-y-2">
+                            {product.fundingOpportunities.valuations.map((valuation, index) => (
+                              <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                                <span className="text-foreground">{valuation}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {/* Tech Stack Section */}
+            {product.techStack && (
+              <div
+                ref={techRef.ref as React.RefObject<HTMLDivElement>}
+                className={`transition-all duration-700 ${
+                  techRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+                }`}
+              >
+                <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                  <CardContent className="p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                        <Code className="w-5 h-5 text-white" />
+                      </div>
+                      <h2 className="text-2xl font-bold">Tech Stack</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Frontend</h3>
+                        <div className="space-y-2">
+                          {product.techStack.frontend.map((tech, index) => (
+                            <div key={index} className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground text-sm">{tech}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Backend</h3>
+                        <div className="space-y-2">
+                          {product.techStack.backend.map((tech, index) => (
+                            <div key={index} className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground text-sm">{tech}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      {product.techStack.ai && (
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-foreground">AI Stack</h3>
+                          <div className="space-y-2">
+                            {product.techStack.ai.map((tech, index) => (
+                              <div key={index} className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                                <span className="text-foreground text-sm">{tech}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Database</h3>
+                        <div className="space-y-2">
+                          {product.techStack.database.map((tech, index) => (
+                            <div key={index} className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground text-sm">{tech}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Hosting</h3>
+                        <div className="space-y-2">
+                          {product.techStack.hosting.map((tech, index) => (
+                            <div key={index} className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground text-sm">{tech}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      {product.techStack.integrations && (
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-foreground">Integrations</h3>
+                          <div className="space-y-2">
+                            {product.techStack.integrations.map((tech, index) => (
+                              <div key={index} className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                                <span className="text-foreground text-sm">{tech}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {/* Competitive Advantage Section */}
+            {product.competitiveAdvantage && (
+              <div
+                ref={competitiveRef.ref as React.RefObject<HTMLDivElement>}
+                className={`transition-all duration-700 ${
+                  competitiveRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+                }`}
+              >
+                <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                  <CardContent className="p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                        <span className="text-white font-bold">🏆</span>
+                      </div>
+                      <h2 className="text-2xl font-bold">Competitive Advantage</h2>
+                    </div>
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Key Features</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {product.competitiveAdvantage.features.map((feature, index) => (
+                            <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-foreground">Comparisons</h3>
+                        <div className="space-y-2">
+                          {product.competitiveAdvantage.comparisons.map((comparison, index) => (
+                            <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                              <span className="text-foreground">{comparison}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      {product.competitiveAdvantage.uniqueSelling && (
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-foreground">Unique Selling Points</h3>
+                          <div className="space-y-2">
+                            {product.competitiveAdvantage.uniqueSelling.map((selling, index) => (
+                              <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                                <span className="text-foreground">{selling}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {/* Development Budget Section */}
+            <div
+              ref={budgetRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                budgetRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold">💵</span>
+                    </div>
+                    <h2 className="text-2xl font-bold">Development Budget</h2>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">MVP</h3>
+                      <div className="space-y-2">
+                        {product.developmentBudget.mvp.map((item, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">Standard</h3>
+                      <div className="space-y-2">
+                        {product.developmentBudget.standard.map((item, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 text-foreground">Premium</h3>
+                      <div className="space-y-2">
+                        {product.developmentBudget.premium.map((item, index) => (
+                          <div key={index} className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                            <span className="text-foreground text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Vision Section */}
+            <div
+              ref={visionRef.ref as React.RefObject<HTMLDivElement>}
+              className={`transition-all duration-700 ${
+                visionRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
+              }`}
+            >
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold">🚀</span>
+                    </div>
+                    <h2 className="text-2xl font-bold">Vision</h2>
+                  </div>
+                  <blockquote className="text-lg italic text-foreground leading-relaxed">
+                    "{product.vision}"
+                  </blockquote>
+                </CardContent>
+              </Card>
+            </div>
           </div>
           {/* Sidebar */}
           <div 
-            ref={sidebarRef.ref}
+            ref={sidebarRef.ref as React.RefObject<HTMLDivElement>}
             className={`space-y-6 transition-all duration-700 ${
               sidebarRef.isVisible ? 'animate-slide-left' : 'scroll-hidden-left'
             }`}
