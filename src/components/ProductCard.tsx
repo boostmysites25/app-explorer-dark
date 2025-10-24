@@ -8,7 +8,7 @@ export interface Product {
   author: string;
   image: string;
   rating: number;
-  sales: number;
+  // sales: number;
   features: string[];
 }
 
@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <Card 
-      className="group cursor-pointer overflow-hidden bg-gradient-card border-border hover:border-accent transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
+      className="group h-full cursor-pointer overflow-hidden bg-gradient-card border-border hover:border-accent transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
       onClick={handleClick}
     >
       <div className="aspect-video overflow-hidden bg-secondary">
@@ -43,7 +43,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <span className="text-yellow-400">★</span>
             <span className="text-sm font-medium">{product.rating}</span>
           </div>
-          <span className="text-xs text-muted-foreground">{product.sales} sales</span>
+          {/* <span className="text-xs text-muted-foreground">{product.sales} sales</span> */}
         </div>
       </div>
     </Card>

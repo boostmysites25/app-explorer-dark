@@ -96,11 +96,11 @@ const ProductDetail = () => {
                   <span className="font-semibold text-lg">{product.rating}</span>
                   <span className="text-muted-foreground">rating</span>
                 </div>
-                <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border">
+                {/* <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border">
                   <Users className="w-5 h-5 text-green-400" />
                   <span className="font-semibold text-lg">{product.sales.toLocaleString()}</span>
                   <span className="text-muted-foreground">sales</span>
-                </div>
+                </div> */}
               </div>
 
               {/* <div className="flex flex-col sm:flex-row gap-4">
@@ -718,13 +718,13 @@ const ProductDetail = () => {
                     </div>
                     <span className="font-bold text-lg">{product.rating}</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg">
+                  {/* <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg">
                     <div className="flex items-center gap-2">
                       <Users className="w-5 h-5 text-green-400" />
                       <span className="font-medium">Sales</span>
                     </div>
                     <span className="font-bold text-lg">{product.sales.toLocaleString()}</span>
-                  </div>
+                  </div> */}
                   <div className="flex flex-wrap gap-4 items-center justify-between p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-5 h-5 text-blue-400" />
