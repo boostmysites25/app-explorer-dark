@@ -279,9 +279,15 @@ const ProductDetail = () => {
                     </div>
                     <h2 className="text-2xl font-bold">Market Opportunity</h2>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
-                    {product.marketOpportunity}
-                  </p>
+                  <div className="space-y-3">
+                    {product.marketOpportunity.map((point, index) => (
+                      <div key={index} className="flex items-start gap-3 p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
+                        <div className="w-4 h-4 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1.5">
+                        </div>
+                        <span className="text-foreground leading-relaxed">{point}</span>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </div>

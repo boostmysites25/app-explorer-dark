@@ -15,8 +15,8 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 flex items-center justify-center p-4 overflow-x-hidden">
-      <Card 
-        ref={notFoundRef.ref}
+      <Card
+        ref={notFoundRef.ref as React.RefObject<HTMLDivElement>}
         className={`max-w-md w-full transition-all duration-700 ${
           notFoundRef.isVisible ? 'animate-scale-in' : 'scroll-hidden-scale'
         }`}

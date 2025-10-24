@@ -16,8 +16,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      <header 
-        ref={headerRef.ref}
+      <header
+        ref={headerRef.ref as React.RefObject<HTMLDivElement>}
         className={`border-b border-border bg-card transition-all duration-700 ${
           headerRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
         }`}
@@ -32,8 +32,8 @@ const Index = () => {
         </div>
       </header>
 
-      <div 
-        ref={filterRef.ref}
+      <div
+        ref={filterRef.ref as React.RefObject<HTMLDivElement>}
         className={`transition-all duration-700 ${
           filterRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
         }`}
@@ -46,7 +46,7 @@ const Index = () => {
       </div>
 
       <div 
-        ref={gridRef.ref}
+        ref={gridRef.ref as React.RefObject<HTMLDivElement>}
         className={`transition-all duration-700 ${
           gridRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
         }`}

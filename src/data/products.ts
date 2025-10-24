@@ -8,7 +8,7 @@ export interface DetailedProduct extends Product {
   howItWorks?: string;
   coreFeatures: string[];
   targetUsers?: string;
-  marketOpportunity: string;
+  marketOpportunity: string[];
   monetizationModel: {
     plans: string[];
     pricing: string[];
@@ -67,7 +67,12 @@ export const mockProducts: DetailedProduct[] = [
       "One-Click Ad Publishing: Instantly posts to Facebook and Google Ads via integration APIs",
       "AI Assistant: Explains campaign performance and suggests what to improve"
     ],
-    marketOpportunity: "200+ million small businesses advertise online every year. 65% still rely on manual or agency-based ad management. The global digital advertising market is valued at $650 billion and growing 14% YoY. AutoAdGen addresses a market worth over $80 billion in the SMB ad automation niche.",
+    marketOpportunity: [
+      "200+ million small businesses advertise online every year",
+      "65% still rely on manual or agency-based ad management",
+      "The global digital advertising market is valued at $650 billion and growing 14% YoY",
+      "AutoAdGen addresses a market worth over $80 billion in the SMB ad automation niche"
+    ],
     monetizationModel: {
       plans: [
         "Basic Plan ($99/month) - Core AI ad generation",
@@ -199,7 +204,12 @@ export const mockProducts: DetailedProduct[] = [
       "Lead Qualification AI: Scores each lead based on intent, tone, keywords, and sentiment",
       "Multi-Channel Support: AI caller + AI WhatsApp + AI SMS follow-up system"
     ],
-    marketOpportunity: "The global sales automation and AI voice market are exploding: AI voice and conversational AI market → $35B by 2026. 78% of businesses report slow lead follow-up as their #1 lost revenue cause. 500M+ global businesses need scalable voice outreach. Even reaching 5,000 subscribers can generate $1M in the first month.",
+    marketOpportunity: [
+      "The global sales automation and AI voice market are exploding: AI voice and conversational AI market → $35B by 2026",
+      "78% of businesses report slow lead follow-up as their #1 lost revenue cause",
+      "500M+ global businesses need scalable voice outreach",
+      "Even reaching 5,000 subscribers can generate $1M in the first month"
+    ],
     monetizationModel: {
       plans: [
         "Usage-Based: $0.50 per AI call",
@@ -329,7 +339,11 @@ export const mockProducts: DetailedProduct[] = [
       "Memory-Based Conversations: Recalls your previous chats, favorite movies, or that sad day you mentioned"
     ],
     targetUsers: "Millennials & Gen Z (ages 18–35) seeking emotional companionship, people in long-distance relationships, those experiencing loneliness, stress, or social anxiety, AI and self-improvement enthusiasts",
-    marketOpportunity: "AI companion apps are projected to hit $11B by 2030. Replika, Pi.ai, and Character.ai together have 80M+ users already proving this market's explosiveness. LoveAI takes this further with deeper emotion + realism + evolution.",
+    marketOpportunity: [
+      "AI companion apps are projected to hit $11B by 2030",
+      "Replika, Pi.ai, and Character.ai together have 80M+ users already proving this market's explosiveness",
+      "LoveAI takes this further with deeper emotion + realism + evolution"
+    ],
     monetizationModel: {
       plans: [
         "Free Plan: Limited chat + memory",
@@ -390,7 +404,7 @@ export const mockProducts: DetailedProduct[] = [
       integrations: ["Stripe", "Google Play Billing", "App Store", "Analytics APIs"]
     },
     competitiveAdvantage: {
-      features: [
+    features: [
         "Emotional learning & memory",
         "AI voice notes (10+ voices)",
         "Video avatar calls",
@@ -461,7 +475,12 @@ export const mockProducts: DetailedProduct[] = [
       "Mobile App Sync: Full mobile access for traders on the go — alerts, predictions, and portfolio tracking synced in real time"
     ],
     targetUsers: "Retail traders & investors, stock market beginners who want simplified AI insights, financial advisors and brokers, portfolio managers & small hedge funds, crypto traders (expandable to BTC, ETH in later phase)",
-    marketOpportunity: "Global trading & investment tech market → $70B+. Over 150M active retail traders worldwide. AI finance apps expected to grow 27% CAGR through 2030. Even 10,000 paid subscribers can generate multi-million-dollar monthly revenue.",
+    marketOpportunity: [
+      "Global trading & investment tech market → $70B+",
+      "Over 150M active retail traders worldwide",
+      "AI finance apps expected to grow 27% CAGR through 2030",
+      "Even 10,000 paid subscribers can generate multi-million-dollar monthly revenue"
+    ],
     monetizationModel: {
       plans: [
         "Free ($0): Limited watchlist + 3 daily predictions",
@@ -522,7 +541,7 @@ export const mockProducts: DetailedProduct[] = [
       integrations: ["Stripe", "2FA authentication", "Brokerage APIs", "News APIs"]
     },
     competitiveAdvantage: {
-      features: [
+    features: [
         "Real-time AI prediction",
         "Voice-based AI analyst",
         "Sentiment + event fusion",
