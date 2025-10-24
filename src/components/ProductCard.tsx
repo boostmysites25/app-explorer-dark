@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
 
 export interface Product {
   id: number;
@@ -18,10 +17,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const navigate = useNavigate();
-
   const handleClick = () => {
-    navigate(`/product/${product.id}`);
+    window.open(`/product/${product.id}`, '_blank');
   };
 
   return (
