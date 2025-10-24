@@ -176,7 +176,6 @@ const ProductDetail = () => {
               </Card>
             </div>
           </div>
-
           {/* Sidebar */}
           <div 
             ref={sidebarRef.ref}
