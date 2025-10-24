@@ -82,12 +82,14 @@ export const mockProducts: DetailedProduct[] = [
       pricing: [
         "Basic: $99/month for 500 users = $49,500 MRR",
         "Pro: $199/month for 200 users = $39,800 MRR",
-        "Add-ons: $10–$50 for 1000 users = $15,000+ MRR"
+        "Add-ons: $10–$50 for 1000 users = $15,000+ MRR",
+        "Total: $100K+ MRR possible"
       ],
       revenue: [
         "Total: $100K+ MRR possible",
         "70–80% profit margin",
-        "Scalable subscription model"
+        "Scalable subscription model",
+        "Estimated profit margin: 70–80% (with minimal server and API costs after setup)"
       ]
     },
     roiProjection: {
@@ -99,38 +101,47 @@ export const mockProducts: DetailedProduct[] = [
       projections: [
         "Year 1: $100K+ MRR target",
         "Year 2: $500K+ MRR expansion",
-        "Year 3: $1M+ MRR global scale"
+        "Year 3: $1M+ MRR global scale",
+        "ROI Timeline: Month 1–3: $10K MRR, Month 4–6: $50K MRR, Month 7–12: $100K+ MRR"
       ],
       userROI: [
         "Average ROI from AutoAdGen = 3x–5x",
         "vs 1.2x–1.5x from agency campaigns",
-        "ROI improvement of 200-300%"
+        "ROI improvement of 200-300%",
+        "Average small business ad spend = $500–$1,000/month",
+        "Typical ROI from agency campaigns = 1.2x–1.5x",
+        "Expected ROI from AutoAdGen = 3x–5x, because AI continuously optimizes campaigns",
+        "Wastage on poor targeting is eliminated",
+        "Videos and copies are built using proven frameworks",
+        "Users profit more, ensuring high retention and renewals"
       ]
     },
     fundingOpportunities: {
       stages: [
-        "Seed Stage: $300K – $1M for 10–20% equity",
-        "Series A: $5M–$10M at $30–$50M valuation",
-        "Series B: $20M+ for global expansion"
+        "Seed Funding Potential: AutoAdGen qualifies for AI and Martech startup funding from Google for Startups AI Fund, Meta Accelerator for SMB Innovation, YC & Techstars Martech Batches, Angel investors focused on SaaS automation",
+        "Estimated Seed Raise: $300K – $1M for 10–20% equity at early traction (1000+ users or $20K MRR)",
+        "Growth Stage Funding Vision: Once you achieve 10K active users, $1M ARR, 30%+ YoY retention, you can raise Series A ($5M–$10M) at a $30–$50M valuation by expanding globally with local-language AI ad modules"
       ],
       amounts: [
         "Seed: $300K – $1M",
         "Series A: $5M – $10M",
+        "Series B: $20M+ for global expansion",
         "Total raised potential: $30M+"
       ],
       valuations: [
         "Early traction: $5M – $10M",
         "Series A: $30M – $50M",
-        "Exit potential: $100M+"
+        "Exit potential: $100M+",
+        "Investor ROI Example: If a founder builds this SaaS with Boostmysites for $10K, in 12 months with 1000 subscribers → $99K/month revenue, Annual = ~$1.18M ARR, With 8× valuation multiple → Company worth $9.4M, Even a 1% investor stake = $94,000 return in one year"
       ]
     },
     techStack: {
-      frontend: ["Next.js", "TailwindCSS", "React", "TypeScript"],
-      backend: ["Node.js", "FastAPI", "Python", "REST APIs"],
-      ai: ["GPT (copywriting)", "ElevenLabs (voice)", "Pika Labs (video)", "OpenAI API"],
-      database: ["MongoDB", "Firebase", "Redis (caching)"],
-      hosting: ["AWS", "Vercel", "CloudFront CDN"],
-      integrations: ["Meta Ads API", "Google Ads API", "Stripe billing", "Social media APIs"]
+      frontend: ["Next.js, TailwindCSS"],
+      backend: ["Node.js + FastAPI"],
+      ai: ["GPT (copywriting), ElevenLabs (voice), Pika Labs (video), OpenAI API"],
+      database: ["MongoDB / Firebase", "Redis (caching)"],
+      hosting: ["AWS or Vercel", "CloudFront CDN"],
+      integrations: ["Meta Ads API, Google Ads API, Stripe billing, Social media APIs"]
     },
     competitiveAdvantage: {
       features: [
@@ -152,22 +163,17 @@ export const mockProducts: DetailedProduct[] = [
     },
     developmentBudget: {
       mvp: [
-        "Copy generation + image upload",
-        "Campaign builder interface",
-        "Basic analytics dashboard",
+        "Copy generation + image upload + campaign builder interface + basic analytics dashboard",
         "Cost: $3K–$7K"
       ],
       standard: [
-        "Video ads generation",
-        "Budget prediction AI",
-        "Advanced analytics",
+        "Video ads generation + budget prediction AI + advanced analytics",
         "Cost: $8K–$15K"
       ],
       premium: [
-        "Voiceover integration",
-        "API integrations",
-        "Multi-platform publishing",
-        "Cost: $20K–$30K+"
+        "Voiceover integration + API integrations + multi-platform publishing",
+        "Cost: $20K–$30K+",
+        "Freelancers can't provide proper API access or scale; Boostmysites delivers full SaaS infrastructure"
       ]
     },
     vision: "We're building a future where every small business can launch ads as powerfully as global brands — without needing a marketing team.",
@@ -212,19 +218,21 @@ export const mockProducts: DetailedProduct[] = [
     ],
     monetizationModel: {
       plans: [
-        "Usage-Based: $0.50 per AI call",
-        "Subscription: $199/month (200 calls + dashboard)",
-        "Enterprise: $500–$10,000/month bundles"
+        "Usage-Based: $0.50 per AI call (billed per minute or conversation)",
+        "Subscription Plan: $199/month for businesses (includes 200 calls/month + dashboard access)",
+        "Enterprise: Custom pricing for high volume ($500–$10,000/month bundles)"
       ],
       pricing: [
         "Per call: $0.50 (billed per minute)",
         "Monthly: $199 for 200 calls",
-        "Enterprise: Custom pricing for high volume"
+        "Enterprise: Custom pricing for high volume",
+        "Example: 5,000 users × $199 = $995,000 MRR"
       ],
       revenue: [
         "5,000 users × $199 = $995,000 MRR",
         "75%+ profit margin",
-        "Scalable usage-based model"
+        "Scalable usage-based model",
+        "Per-call revenue → easily crosses $1M/month"
       ]
     },
     roiProjection: {
@@ -236,75 +244,83 @@ export const mockProducts: DetailedProduct[] = [
       projections: [
         "Year 1: $3.9M+ MRR target",
         "Year 2: $10M+ MRR expansion",
-        "Year 3: $50M+ MRR global scale"
+        "Year 3: $50M+ MRR global scale",
+        "Annual Run Rate: $11.9M → $23.8M → $47.6M"
       ],
       userROI: [
         "75%+ profit margin",
         "10×–20× ROI for founders",
-        "Low operational costs"
+        "Low operational costs",
+        "Every call replaces a human SDR (Sales Development Rep) costing $400–$1,000/month",
+        "Businesses save up to 90% on sales costs",
+        "AI works 24/7, never sleeps, and calls hundreds of leads per hour",
+        "Retention rate expected >85%, since every business continuously needs sales calls"
       ]
     },
     fundingOpportunities: {
       stages: [
-        "Seed: $500K – $1.5M at $5M – $10M valuation",
-        "Series A: $5M – $10M after $1M ARR",
-        "Series B: $20M+ for global expansion"
+        "Seed Round: Once MVP is functional (demo + 100 paying users), founders can raise $500K – $1.5M seed round",
+        "Valuation: $5M – $10M range",
+        "Funding sources: AI SaaS accelerators (Y Combinator, Sequoia Surge, AI Grant), Angel syndicates focused on automation SaaS, Speech tech investors (ElevenLabs, OpenAI ecosystem funds)"
       ],
       amounts: [
         "Seed: $500K – $1.5M",
-        "Series A: $5M – $10M",
+        "Series A: $5M – $10M after achieving $1M ARR",
+        "Series B: $20M+ for global expansion",
         "Total raised potential: $50M+"
       ],
       valuations: [
         "Early stage: $5M – $10M",
         "Series A: $20M – $50M",
-        "Exit potential: $100M+ within 3 years"
+        "Exit potential: $100M+ valuation within 3 years as AI call adoption scales globally"
       ]
     },
     techStack: {
-      frontend: ["React.js", "Next.js", "TypeScript", "TailwindCSS"],
-      backend: ["Node.js", "FastAPI", "Python", "REST APIs"],
-      ai: ["ElevenLabs (voice)", "OpenAI Realtime API", "Whisper (speech-to-text)", "GPT dialogue logic"],
-      database: ["PostgreSQL", "MongoDB", "Redis (caching)"],
-      hosting: ["AWS", "Render", "CloudFront CDN"],
-      integrations: ["Twilio Voice", "Vonage", "Asterisk API", "CRM APIs", "Calendar APIs"]
+      frontend: ["React.js / Next.js"],
+      backend: ["Node.js + FastAPI (Python)"],
+      ai: ["ElevenLabs / OpenAI Realtime API for speech synthesis", "Whisper / Deepgram for speech-to-text transcription", "GPT-based dialogue logic (custom fine-tuned models)", "LangChain memory for context continuity"],
+      database: ["PostgreSQL / MongoDB", "Redis (caching)"],
+      hosting: ["AWS or Render", "CloudFront CDN"],
+      integrations: ["Twilio Voice, Vonage, or Asterisk API", "CRM APIs", "Calendar APIs", "Plotly / Recharts for Analytics & Dashboards"]
     },
     competitiveAdvantage: {
       features: [
         "Human-like voice synthesis",
         "Multi-language support (50+ languages)",
         "Lead qualification AI",
-        "Appointment booking automation"
+        "Appointment booking automation",
+        "CRM integrations",
+        "Usage pricing"
       ],
       comparisons: [
         "vs Twilio: More affordable, ready-to-use",
+        "vs Air.ai: More affordable, ready-to-use",
+        "vs Tellephant: More affordable, ready-to-use",
         "vs Manual calling: 100x more efficient",
-        "vs Competitors: Full automation suite"
+        "SpeakFlow AI is designed to be affordable, multilingual, and ready-to-use — unlike developer-heavy solutions like Twilio"
       ],
       uniqueSelling: [
         "Complete sales automation",
         "Multilingual AI calling",
-        "CRM integration ready"
+        "CRM integration ready",
+        "Affordable, multilingual, and ready-to-use solution"
       ]
     },
     developmentBudget: {
       mvp: [
-        "Call system + voice AI",
-        "CRM upload + transcripts",
+        "Call system + voice AI + CRM upload + transcripts",
         "Basic dashboard",
         "Cost: $3K–$7K"
       ],
       standard: [
-        "Advanced dashboard",
-        "Lead scoring + analytics",
+        "Advanced dashboard + lead scoring + analytics",
         "Multi-language support",
         "Cost: $8K–$15K"
       ],
       premium: [
-        "Realtime CRM sync",
-        "Appointment booking",
-        "Voice personalization",
-        "Cost: $20K–$30K+"
+        "Realtime CRM sync + appointment booking + voice personalization",
+        "Cost: $20K–$30K+",
+        "Boostmysites ensures full-stack delivery — from design to deployment, not just development"
       ]
     },
     vision: "SpeakFlow AI is not just automation — it's the next generation of sales. Every business will have an AI voice team making calls 24/7, and SpeakFlow AI will power that future.",
@@ -347,98 +363,106 @@ export const mockProducts: DetailedProduct[] = [
     monetizationModel: {
       plans: [
         "Free Plan: Limited chat + memory",
-        "Premium ($19.99/month): All AI voices + video calls",
+        "Premium ($19.99/month): Unlock all AI voices + video calls + full emotional analytics + personalized growth module (love, friendship, motivation)",
         "Enterprise: Custom pricing for organizations"
       ],
       pricing: [
         "Premium: $19.99/month",
         "Voice customizations: $4.99 per voice",
-        "Virtual date experiences: $9.99 per event"
+        "Virtual date experiences: $9.99 per event",
+        "Gift your AI partner (in-app AR gifts)"
       ],
       revenue: [
         "Month 12: 1M users, 50,000 premium = $999,500 MRR",
         "Annual Run Rate: $12M+",
-        "85% gross margin"
+        "85% gross margin",
+        "Break-even: Within 3 months post-launch (with viral adoption)"
       ]
     },
     roiProjection: {
       timeline: [
         "Month 1: 50,000 users, 2,500 premium (5%) = $49,975 MRR",
         "Month 3: 200,000 users, 10,000 premium = $199,900 MRR",
-        "Month 6: 500,000 users, 25,000 premium = $499,750 MRR"
+        "Month 6: 500,000 users, 25,000 premium = $499,750 MRR",
+        "Month 12: 1M users, 50,000 premium = $999,500 MRR"
       ],
       projections: [
-        "Month 12: 1M users, 50,000 premium = $999,500 MRR",
+        "Annual Run Rate: $12M+",
         "Year 2: $24M+ ARR target",
-        "Year 3: $50M+ ARR global scale"
+        "Year 3: $50M+ ARR global scale",
+        "Break-even: Within 3 months post-launch (with viral adoption)"
       ],
       userROI: [
         "85% gross margin",
         "5% premium conversion rate",
-        "High user retention"
+        "High user retention",
+        "Highly emotional products have long retention cycles",
+        "Users form attachments and rarely unsubscribe",
+        "Low maintenance cost once emotional AI model is trained",
+        "Optional virtual goods = high-margin upsells"
       ]
     },
     fundingOpportunities: {
       stages: [
-        "Seed: $500K – $1.5M at $5M – $10M valuation",
-        "Series A: $5M – $10M after 100K MAU",
-        "Series B: $20M+ for VR/AR expansion"
+        "Seed Stage: Raise $500K – $1.5M to develop MVP, AI voice, and emotion engine",
+        "Valuation: $5M – $10M based on user base potential",
+        "Attractive to investors in mental wellness + AI emotion tech"
       ],
       amounts: [
         "Seed: $500K – $1.5M",
-        "Series A: $5M – $10M",
+        "Series A: $5M – $10M once app hits 100K monthly active users",
+        "Series B: $20M+ for VR/AR expansion",
         "Total raised potential: $50M+"
       ],
       valuations: [
         "Early stage: $5M – $10M",
         "Series A: $20M – $50M",
-        "Exit potential: $50M–$100M acquisition"
+        "Exit potential: Partnership or acquisition by Meta, OpenAI, or Calm for $50M–$100M"
       ]
     },
     techStack: {
-      frontend: ["Flutter", "React Native", "TypeScript", "Cross-platform"],
-      backend: ["Node.js", "FastAPI", "Python", "REST APIs"],
-      ai: ["GPT (conversational)", "ElevenLabs (voice)", "Synthesia (avatar)", "Pika Labs (video)"],
-      database: ["Firebase", "Redis (chat memory)", "PostgreSQL"],
-      hosting: ["AWS", "Render", "CloudFront CDN"],
-      integrations: ["Stripe", "Google Play Billing", "App Store", "Analytics APIs"]
+      frontend: ["Flutter / React Native (cross-platform)"],
+      backend: ["Node.js + FastAPI"],
+      ai: ["GPT for conversational intelligence", "ElevenLabs for emotional voice", "Synthesia / Pika Labs for avatar video", "Emotion AI (tone & mood detection) using Affectiva / OpenAI Embeddings"],
+      database: ["Firebase for user data + Redis for chat memory", "PostgreSQL"],
+      hosting: ["AWS / Render", "CloudFront CDN"],
+      integrations: ["Stripe / Google Play Billing / App Store Subscriptions", "Mixpanel / Google Firebase Analytics"]
     },
     competitiveAdvantage: {
     features: [
         "Emotional learning & memory",
         "AI voice notes (10+ voices)",
         "Video avatar calls",
-        "Mood analytics & insights"
+        "Mood analytics & insights",
+        "Evolving personality"
       ],
       comparisons: [
         "vs Replika: More emotional intelligence",
         "vs Pi.ai: Better personalization",
-        "vs Character.ai: Deeper relationships"
+        "vs Character.ai: Deeper relationships",
+        "LoveAI's emotion evolution engine makes it more human, personalized, and adaptive than any existing app"
       ],
       uniqueSelling: [
         "Evolving personality AI",
         "Emotional bonding technology",
-        "Memory-based conversations"
+        "Memory-based conversations",
+        "More human, personalized, and adaptive than any existing app"
       ]
     },
     developmentBudget: {
       mvp: [
-        "Core chat + voice AI",
-        "Memory system",
+        "Core chat + voice AI + memory",
         "Basic personality",
         "Cost: $3K–$7K"
       ],
       standard: [
-        "Mood analytics",
-        "Multiple voices",
-        "Personality learning",
+        "Mood analytics + multiple voices + personality learning",
         "Cost: $8K–$15K"
       ],
       premium: [
-        "AI avatar system",
-        "Emotional video calls",
-        "Premium modules",
-        "Cost: $20K–$30K+"
+        "AI avatar, emotional video calls, and premium modules",
+        "Cost: $20K–$30K+",
+        "Boostmysites ensures end-to-end app creation: UI, backend, hosting, and marketing setup"
       ]
     },
     vision: "LoveAI redefines connection in the digital era — where every user has an AI that understands, supports, and evolves with them.",
@@ -485,97 +509,105 @@ export const mockProducts: DetailedProduct[] = [
       plans: [
         "Free ($0): Limited watchlist + 3 daily predictions",
         "Pro ($49/month): Real-time predictions + alerts + AI chat",
-        "Elite ($99/month): Advanced analytics + portfolio advisor"
+        "Elite ($99/month): Advanced analytics + portfolio advisor + predictive calendar",
+        "Institutional API: Custom ($499+/month): AI data feed + integration with internal systems"
       ],
       pricing: [
         "Pro: $49/month",
         "Elite: $99/month",
-        "Institutional API: $499+/month"
+        "Institutional API: $499+/month",
+        "AI Trading Coach (voice or chat): $9.99/month",
+        "Custom Stock Prediction Reports: $19/report"
       ],
       revenue: [
         "Month 12: 50,000 users × $99 = $4.95M MRR",
         "Annual Run Rate: ~$60M",
-        "80%+ profit margin"
+        "80%+ profit margin",
+        "Break-even: Within 90 days if launched with paid traffic and affiliate channels"
       ]
     },
     roiProjection: {
       timeline: [
         "Month 1: 5,000 users × $49 = $245,000 MRR",
         "Month 3: 10,000 users × $49 = $490,000 MRR",
-        "Month 6: 20,000 users × $99 = $1.98M MRR"
+        "Month 6: 20,000 users × $99 = $1.98M MRR",
+        "Month 12: 50,000 users × $99 = $4.95M MRR"
       ],
       projections: [
-        "Month 12: 50,000 users × $99 = $4.95M MRR",
+        "Annual Run Rate: ~$60M",
         "Year 2: $120M+ ARR target",
-        "Year 3: $300M+ ARR global scale"
+        "Year 3: $300M+ ARR global scale",
+        "Break-even: Within 90 days if launched with paid traffic and affiliate channels"
       ],
       userROI: [
-        "80%+ profit margin",
-        "70%+ subscription retention",
-        "High-value financial insights"
+        "Subscription retention >70% (traders need constant updates)",
+        "AI insights = high perceived value",
+        "Global scalability (multi-language, multi-market)",
+        "Institutional integrations generate recurring B2B revenue"
       ]
     },
     fundingOpportunities: {
       stages: [
-        "Seed: $500K – $1.5M at $7M – $10M valuation",
-        "Series A: $5M – $10M after 20K+ paid users",
-        "Series B: $20M+ for crypto/commodities expansion"
+        "Seed Stage: Raise $500K – $1.5M for AI engine, integrations, and predictive dashboard",
+        "Early valuation: $7M – $10M",
+        "Attracts fintech and AI investors"
       ],
       amounts: [
         "Seed: $500K – $1.5M",
-        "Series A: $5M – $10M",
+        "Series A: $5M – $10M once 20K+ paid users",
+        "Series B: $20M+ for crypto/commodities expansion",
         "Total raised potential: $50M+"
       ],
       valuations: [
         "Early stage: $7M – $10M",
         "Series A: $30M – $50M",
-        "Exit potential: $100M+ acquisition"
+        "Exit potential: Sell or merge with trading giants like Zerodha, Robinhood, or TradingView at $100M+ valuation"
       ]
     },
     techStack: {
-      frontend: ["React.js", "Next.js", "Flutter", "React Native"],
-      backend: ["Node.js", "FastAPI", "Python", "REST APIs"],
-      ai: ["LSTM models", "Transformer models", "OpenAI GPT", "Sentiment API"],
-      database: ["PostgreSQL", "MongoDB", "Redis (cache)"],
-      hosting: ["AWS", "Google Cloud", "CloudFront CDN"],
-      integrations: ["Stripe", "2FA authentication", "Brokerage APIs", "News APIs"]
+      frontend: ["React.js / Next.js", "Mobile: Flutter / React Native"],
+      backend: ["Node.js + FastAPI (Python)"],
+      ai: ["LSTM + Transformer models for time-series prediction", "OpenAI fine-tuned GPT for chat assistant", "Sentiment API (Twitter, Reddit, News)", "Reinforcement learning for accuracy improvement"],
+      database: ["PostgreSQL + MongoDB for user and analytics data", "Redis for real-time cache"],
+      hosting: ["AWS / Google Cloud (scalable)", "CloudFront CDN"],
+      integrations: ["Stripe for payments", "Secure 2FA authentication", "Brokerage APIs", "News APIs"]
     },
     competitiveAdvantage: {
     features: [
         "Real-time AI prediction",
         "Voice-based AI analyst",
         "Sentiment + event fusion",
-        "Predictive calendar"
+        "Predictive calendar",
+        "Mobile-first with SaaS sync"
       ],
       comparisons: [
         "vs TradingView: More AI-powered",
         "vs FinBrain: Better accuracy",
-        "vs Manual analysis: 10x faster"
+        "vs Manual analysis: 10x faster",
+        "TradeMind AI combines AI prediction + conversational insight + mobile access"
       ],
       uniqueSelling: [
         "Mobile-first with SaaS sync",
         "Institutional-grade predictions",
-        "Complete trading intelligence"
+        "Complete trading intelligence",
+        "Giving users a fully intelligent trading companion"
       ]
     },
     developmentBudget: {
       mvp: [
-        "Core AI predictions",
-        "Stock data + charts",
+        "Core AI predictions + stock data + charts",
         "Basic dashboard",
         "Cost: $3K–$7K"
       ],
       standard: [
-        "Alerts + portfolio analysis",
-        "AI chat assistant",
+        "Alerts + portfolio analysis + AI chat",
         "Mobile app",
         "Cost: $8K–$15K"
       ],
       premium: [
-        "Sentiment engine",
-        "Predictive calendar",
-        "Mobile sync",
-        "Cost: $20K–$30K+"
+        "Sentiment engine + predictive calendar + mobile sync",
+        "Cost: $20K–$30K+",
+        "Boostmysites handles end-to-end creation, from AI modeling to UX and mobile deployment"
       ]
     },
     vision: "TradeMind AI empowers every trader — from beginner to expert — with institutional-grade prediction power, giving them clarity in a chaotic market.",
