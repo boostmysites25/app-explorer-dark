@@ -54,12 +54,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Turn your product link into a full-scale, profit-driven ad campaign in less than a minute.",
     description: "AutoAdGen is an AI SaaS platform that empowers small businesses to instantly create and launch profitable ad campaigns on Facebook, Instagram, and Google — using just a product link or a few images.",
     author: "Boostmysites",
-    image: "/src/assets/projects/AutoAdGen-1.webp",
+    image: "/assets/projects/AutoAdGen-1.webp",
     images: [
-      "/src/assets/projects/AutoAdGen-1.webp",
-      "/src/assets/projects/AutoAdGen-2.webp",
-      "/src/assets/projects/AutoAdGen-3.webp",
-      "/src/assets/projects/AutoAdGen-4.webp"
+      "/assets/projects/AutoAdGen-1.webp",
+      "/assets/projects/AutoAdGen-2.webp",
+      "/assets/projects/AutoAdGen-3.webp",
+      "/assets/projects/AutoAdGen-4.webp"
     ],
     rating: 4.9,
     // sales: 2500,
@@ -200,12 +200,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Let AI talk to your leads — book meetings, qualify prospects, and grow your sales while you sleep.",
     description: "SpeakFlow AI is a revolutionary SaaS that replaces traditional sales calling teams with intelligent AI voice agents. It automatically calls, speaks, and qualifies leads in real time using human-like natural voices that adapt tone, emotion, and language.",
     author: "Boostmysites",
-    image: "/src/assets/projects/SpeakFlow AI-1.webp",
+    image: "/assets/projects/SpeakFlow AI-1.webp",
     images: [
-      "/src/assets/projects/SpeakFlow AI-1.webp",
-      "/src/assets/projects/SpeakFlow AI-2.webp",
-      "/src/assets/projects/SpeakFlow AI-3.webp",
-      "/src/assets/projects/SpeakFlow AI-4.webp"
+      "/assets/projects/SpeakFlow AI-1.webp",
+      "/assets/projects/SpeakFlow AI-2.webp",
+      "/assets/projects/SpeakFlow AI-3.webp",
+      "/assets/projects/SpeakFlow AI-4.webp"
     ],
     rating: 4.8,
     // sales: 3200,
@@ -353,12 +353,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Your emotional companion. Your listener. Your ideal partner — powered by AI.",
     description: "LoveAI is an emotionally intelligent AI companion app designed to grow with the user — learning their tone, habits, lifestyle, and emotional needs over time. It acts as a friend, partner, or confidant, capable of holding deep conversations, sending personalized voice notes, remembering shared memories, and evolving into a truly custom emotional match.",
     author: "Boostmysites",
-    image: "/src/assets/projects/LoveAI-1.webp",
+    image: "/assets/projects/LoveAI-1.webp",
     images: [
-      "/src/assets/projects/LoveAI-1.webp",
-      "/src/assets/projects/LoveAI-2.webp",
-      "/src/assets/projects/LoveAI-3.webp",
-      "/src/assets/projects/LoveAI-4.webp"
+      "/assets/projects/LoveAI-1.webp",
+      "/assets/projects/LoveAI-2.webp",
+      "/assets/projects/LoveAI-3.webp",
+      "/assets/projects/LoveAI-4.webp"
     ],
     rating: 4.7,
     // sales: 18500,
@@ -501,12 +501,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "See tomorrow's market today — powered by AI.",
     description: "TradeMind AI is a cutting-edge SaaS and mobile app that predicts stock market movements using advanced AI models trained on live market data, financial news, social sentiment, and historical trends. It helps traders, investors, and fund managers make data-backed trading decisions by forecasting short-term and long-term price movements, volatility, and buy/sell signals.",
     author: "Boostmysites",
-    image: "/src/assets/projects/TradeMind AI-1r.webp",
+    image: "/assets/projects/TradeMind AI-1r.webp",
     images: [
-      "/src/assets/projects/TradeMind AI-1r.webp",
-      "/src/assets/projects/TradeMind AI-2.webp",
-      "/src/assets/projects/TradeMind AI-3.webp",
-      "/src/assets/projects/TradeMind AI-4.webp"
+      "/assets/projects/TradeMind AI-1r.webp",
+      "/assets/projects/TradeMind AI-2.webp",
+      "/assets/projects/TradeMind AI-3.webp",
+      "/assets/projects/TradeMind AI-4.webp"
     ],
     rating: 4.8,
     // sales: 4200,
@@ -652,12 +652,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "From idea to empire — in minutes, not months.",
     description: "DreamLife AI is the world's first AI cofounder that builds your entire business from a single idea prompt. You simply describe your dream business — a SaaS, mobile app, e-commerce brand, or AI startup — and DreamLife AI instantly builds everything you need to launch and grow it.",
     author: "Boostmysites",
-    image: "/src/assets/projects/DreamLife AI-1.webp",
+    image: "/assets/projects/DreamLife AI-1.webp",
     images: [
-      "/src/assets/projects/DreamLife AI-1.webp",
-      "/src/assets/projects/DreamLife AI-2.webp",
-      "/src/assets/projects/DreamLife AI-3.webp",
-      "/src/assets/projects/DreamLife AI-4.webp"
+      "/assets/projects/DreamLife AI-1.webp",
+      "/assets/projects/DreamLife AI-2.webp",
+      "/assets/projects/DreamLife AI-3.webp",
+      "/assets/projects/DreamLife AI-4.webp"
     ],
     rating: 4.9,
     overview: "DreamLife AI is the world's first AI cofounder that builds your entire business from a single idea prompt. You simply describe your dream business — a SaaS, mobile app, e-commerce brand, or AI startup — and DreamLife AI instantly builds everything you need to launch and grow it. From concept to company, DreamLife AI does what usually takes months — in minutes.",
@@ -798,12 +798,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Go live. Sell local. Earn global.",
     description: "ShopStream is a mobile-first live shopping platform that empowers small shop owners, local artisans, and street vendors to sell their products through live video streams — just like Instagram Live or TikTok Shop, but hyper-focused on the local community market.",
     author: "Boostmysites",
-    image: "/src/assets/projects/ShopStream-1.webp",
+    image: "/assets/projects/ShopStream-1.webp",
     images: [
-      "/src/assets/projects/ShopStream-1.webp",
-      "/src/assets/projects/ShopStream-2.webp",
-      "/src/assets/projects/ShopStream-3.webp",
-      "/src/assets/projects/ShopStream-4.webp"
+      "/assets/projects/ShopStream-1.webp",
+      "/assets/projects/ShopStream-2.webp",
+      "/assets/projects/ShopStream-3.webp",
+      "/assets/projects/ShopStream-4.webp"
     ],
     rating: 4.8,
     overview: "ShopStream is a mobile-first live shopping platform that empowers small shop owners, local artisans, and street vendors to sell their products through live video streams — just like Instagram Live or TikTok Shop, but hyper-focused on the local community market. Sellers simply go live, showcase their items, interact with buyers in real time, and receive instant payments. Buyers can chat, ask questions, and purchase instantly — all while watching the live stream. ShopStream bridges the gap between traditional local shops and digital e-commerce, bringing personality, trust, and excitement back to online shopping.",
@@ -945,12 +945,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "See it. Fit it. Love it — before you buy.",
     description: "RoomFit is a next-generation Augmented Reality (AR) furniture shopping app that lets users visualize how furniture and home décor items will look and fit inside their rooms — using just their smartphone camera.",
     author: "Boostmysites",
-    image: "/src/assets/projects/RoomFit-1.webp",
+    image: "/assets/projects/RoomFit-1.webp",
     images: [
-      "/src/assets/projects/RoomFit-1.webp",
-      "/src/assets/projects/RoomFit-2.webp",
-      "/src/assets/projects/RoomFit-3.webp",
-      "/src/assets/projects/RoomFit-4.webp"
+      "/assets/projects/RoomFit-1.webp",
+      "/assets/projects/RoomFit-2.webp",
+      "/assets/projects/RoomFit-3.webp",
+      "/assets/projects/RoomFit-4.webp"
     ],
     rating: 4.9,
     overview: "RoomFit is a next-generation Augmented Reality (AR) furniture shopping app that lets users visualize how furniture and home décor items will look and fit inside their rooms — using just their smartphone camera. Customers can browse thousands of furniture items, place them virtually in their space, walk around them in real time, and instantly see how they blend with their interiors before making a purchase. RoomFit bridges the gap between online furniture shopping and in-store experience, giving buyers total confidence in their purchase decisions while helping furniture retailers boost conversions and reduce returns.",
@@ -1094,12 +1094,12 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Revive. Reuse. ReEarn.",
     description: "ReCircle is a sustainability-driven online marketplace and mobile app that allows people to sell, donate, or buy gently used goods — from smartphones and laptops to clothes, furniture, and appliances.",
     author: "Boostmysites",
-    image: "/src/assets/projects/ReCircle-1.webp",
+    image: "/assets/projects/ReCircle-1.webp",
     images: [
-      "/src/assets/projects/ReCircle-1.webp",
-      "/src/assets/projects/ReCircle-2.webp",
-      "/src/assets/projects/ReCircle-3.webp",
-      "/src/assets/projects/ReCircle-4.webp"
+      "/assets/projects/ReCircle-1.webp",
+      "/assets/projects/ReCircle-2.webp",
+      "/assets/projects/ReCircle-3.webp",
+      "/assets/projects/ReCircle-4.webp"
     ],
     rating: 4.8,
     overview: "ReCircle is a sustainability-driven online marketplace and mobile app that allows people to sell, donate, or buy gently used goods — from smartphones and laptops to clothes, furniture, and appliances. The platform manages everything from pickup to refurbishment and resale, ensuring that items get a second life, sellers get cash instantly, and buyers get affordable, quality-checked products. It's not just a marketplace — it's a circular economy platform that combines commerce + recycling + social impact.",
