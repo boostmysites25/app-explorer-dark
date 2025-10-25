@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { mockProducts, DetailedProduct } from "@/data/products";
-import useScrollAnimation from "@/hooks/use-scroll-animation";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -13,22 +12,6 @@ const ProductDetail = () => {
   const product: DetailedProduct | undefined = mockProducts.find(
     (p) => p.id === parseInt(id || "0")
   );
-
-  // Scroll animation hooks
-  const heroRef = useScrollAnimation();
-  const overviewRef = useScrollAnimation();
-  const problemRef = useScrollAnimation();
-  const solutionRef = useScrollAnimation();
-  const featuresRef = useScrollAnimation();
-  const marketRef = useScrollAnimation();
-  const monetizationRef = useScrollAnimation();
-  const roiRef = useScrollAnimation();
-  const fundingRef = useScrollAnimation();
-  const techRef = useScrollAnimation();
-  const competitiveRef = useScrollAnimation();
-  const budgetRef = useScrollAnimation();
-  const visionRef = useScrollAnimation();
-  const sidebarRef = useScrollAnimation();
 
   if (!product) {
     return (
@@ -53,15 +36,10 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 overflow-x-hidden">
       {/* Hero Section */}
-      <div 
-        ref={heroRef.ref as React.RefObject<HTMLDivElement>}
-        className={`relative overflow-hidden transition-all duration-700 ${
-          heroRef.isVisible ? 'animate-fade-in' : 'scroll-hidden'
-        }`}
-      >
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5"></div>
-        <div className="container mx-auto px-4 py-8 relative">
-          <div className="flex flex-wrap items-center gap-4 mb-6">
+        <div className="container mx-auto px-4 py-12 relative">
+          <div className="flex flex-wrap items-center gap-4 mb-8">
             <Button 
               variant="outline" 
               size="sm"
@@ -76,73 +54,50 @@ const ProductDetail = () => {
             </Badge>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent leading-tight">
-                  {product.title}
-                </h1>
-                <p className="text-xl text-muted-foreground mt-2 leading-relaxed">
-                  {product.tagline}
-                </p>
-                <p className="text-lg text-muted-foreground mt-2">
-                  Premium AI-powered solution by {product.author}
-                </p>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-primary bg-clip-text text-transparent leading-tight mb-4">
+              {product.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-2 leading-relaxed max-w-4xl mx-auto">
+              {product.tagline}
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Premium AI-powered solution by {product.author}
+            </p>
+            
+            <div className="flex flex-wrap items-center justify-center gap-6 mt-6">
+              <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border">
+                <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                <span className="font-semibold text-lg">{product.rating}</span>
+                <span className="text-muted-foreground">rating</span>
               </div>
-
-              <div className="flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border">
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <span className="font-semibold text-lg">{product.rating}</span>
-                  <span className="text-muted-foreground">rating</span>
-                </div>
-                {/* <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border">
-                  <Users className="w-5 h-5 text-green-400" />
-                  <span className="font-semibold text-lg">{product.sales.toLocaleString()}</span>
-                  <span className="text-muted-foreground">sales</span>
-                </div> */}
-              </div>
-
-              {/* <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-white px-8 py-3 text-lg font-semibold">
-                  <Zap className="w-5 h-5 mr-2" />
-                  Get Started
-                </Button>
-                <Button size="lg" variant="outline" className="px-8 py-3 text-lg font-semibold hover:bg-accent/50">
-                  <TrendingUp className="w-5 h-5 mr-2" />
-                  Learn More
-                </Button>
-              </div> */}
-            </div>
-
-            <div className="relative">
-              <div className="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 shadow-2xl">
-                <img 
-                  src={product.image} 
-                  alt={product.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-20 blur-xl"></div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* First Image Section */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-2xl mx-auto">
+          <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 shadow-xl">
+            <img 
+              src={product.images[0]} 
+              alt={`${product.title} - Main View`}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
           {/* Main Content */}
-          <div className="xl:col-span-2 space-y-8">
+          <div className="xl:col-span-2 space-y-6">
             {/* Overview Section */}
-            <div
-              ref={overviewRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                overviewRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <Eye className="w-5 h-5 text-white" />
@@ -156,15 +111,23 @@ const ProductDetail = () => {
               </Card>
             </div>
 
+            {/* Second Image Section */}
+            <div className="container mx-auto px-4 py-6">
+              <div className="max-w-xl mx-auto">
+                <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 shadow-xl">
+                  <img 
+                    src={product.images[1]} 
+                    alt={`${product.title} - Feature View`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Problem Section */}
-            <div
-              ref={problemRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                problemRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold">⚠️</span>
@@ -179,14 +142,9 @@ const ProductDetail = () => {
             </div>
 
             {/* Solution Section */}
-            <div
-              ref={solutionRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                solutionRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <Lightbulb className="w-5 h-5 text-white" />
@@ -209,14 +167,9 @@ const ProductDetail = () => {
             </div>
 
             {/* Core Features Section */}
-            <div
-              ref={featuresRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                featuresRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold">✨</span>
@@ -240,16 +193,24 @@ const ProductDetail = () => {
               </Card>
             </div>
 
+            {/* Third Image Section */}
+            <div className="container mx-auto px-4 py-6">
+              <div className="max-w-xl mx-auto">
+                <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 shadow-xl">
+                  <img 
+                    src={product.images[2]} 
+                    alt={`${product.title} - Interface View`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Target Users Section */}
             {product.targetUsers && (
-              <div
-                ref={marketRef.ref as React.RefObject<HTMLDivElement>}
-                className={`transition-all duration-700 ${
-                  marketRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-                }`}
-              >
+              <div>
                 <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                         <Target className="w-5 h-5 text-white" />
@@ -265,14 +226,9 @@ const ProductDetail = () => {
             )}
 
             {/* Market Opportunity Section */}
-            <div
-              ref={marketRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                marketRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <TrendingUpIcon className="w-5 h-5 text-white" />
@@ -293,14 +249,9 @@ const ProductDetail = () => {
             </div>
 
             {/* Monetization Model Section */}
-            <div
-              ref={monetizationRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                monetizationRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <DollarSign className="w-5 h-5 text-white" />
@@ -346,14 +297,9 @@ const ProductDetail = () => {
             </div>
 
             {/* ROI Projection Section */}
-            <div
-              ref={roiRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                roiRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <TrendingUp className="w-5 h-5 text-white" />
@@ -400,14 +346,9 @@ const ProductDetail = () => {
 
             {/* Funding Opportunities Section */}
             {product.fundingOpportunities && (
-              <div
-                ref={fundingRef.ref as React.RefObject<HTMLDivElement>}
-                className={`transition-all duration-700 ${
-                  fundingRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-                }`}
-              >
+              <div>
                 <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                         <span className="text-white font-bold">💰</span>
@@ -455,14 +396,9 @@ const ProductDetail = () => {
 
             {/* Tech Stack Section */}
             {product.techStack && (
-              <div
-                ref={techRef.ref as React.RefObject<HTMLDivElement>}
-                className={`transition-all duration-700 ${
-                  techRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-                }`}
-              >
+              <div>
                 <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                         <Code className="w-5 h-5 text-white" />
@@ -542,14 +478,9 @@ const ProductDetail = () => {
 
             {/* Competitive Advantage Section */}
             {product.competitiveAdvantage && (
-              <div
-                ref={competitiveRef.ref as React.RefObject<HTMLDivElement>}
-                className={`transition-all duration-700 ${
-                  competitiveRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-                }`}
-              >
+              <div>
                 <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                         <span className="text-white font-bold">🏆</span>
@@ -596,14 +527,9 @@ const ProductDetail = () => {
             )}
 
             {/* Development Budget Section */}
-            <div
-              ref={budgetRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                budgetRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold">💵</span>
@@ -646,15 +572,23 @@ const ProductDetail = () => {
               </Card>
             </div>
 
+            {/* Fourth Image Section */}
+            <div className="container mx-auto px-4 py-6">
+              <div className="max-w-2xl mx-auto">
+                <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 shadow-xl">
+                  <img 
+                    src={product.images[3]} 
+                    alt={`${product.title} - Use Case View`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Vision Section */}
-            <div
-              ref={visionRef.ref as React.RefObject<HTMLDivElement>}
-              className={`transition-all duration-700 ${
-                visionRef.isVisible ? 'animate-slide-up' : 'scroll-hidden'
-              }`}
-            >
+            <div>
               <Card className="border-0 shadow-lg bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold">🚀</span>
@@ -669,16 +603,11 @@ const ProductDetail = () => {
             </div>
           </div>
           {/* Sidebar */}
-          <div 
-            ref={sidebarRef.ref as React.RefObject<HTMLDivElement>}
-            className={`space-y-6 transition-all duration-700 ${
-              sidebarRef.isVisible ? 'animate-slide-left' : 'scroll-hidden-left'
-            }`}
-          >
+           <div className="space-y-4">
             {/* Developer Card */}
             <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
+              <CardContent className="p-4">
+                <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">👨‍💻</span>
                   </div>
@@ -703,14 +632,14 @@ const ProductDetail = () => {
 
             {/* Stats Card */}
             <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
+              <CardContent className="p-4">
+                <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">📊</span>
                   </div>
                   <h3 className="text-xl font-bold">Product Stats</h3>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg">
                     <div className="flex items-center gap-2">
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />

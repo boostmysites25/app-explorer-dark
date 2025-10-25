@@ -3,11 +3,9 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Home } from "lucide-react";
-import useScrollAnimation from "@/hooks/use-scroll-animation";
 
 const NotFound = () => {
   const location = useLocation();
-  const notFoundRef = useScrollAnimation();
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
@@ -15,12 +13,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 flex items-center justify-center p-4 overflow-x-hidden">
-      <Card
-        ref={notFoundRef.ref as React.RefObject<HTMLDivElement>}
-        className={`max-w-md w-full transition-all duration-700 ${
-          notFoundRef.isVisible ? 'animate-scale-in' : 'scroll-hidden-scale'
-        }`}
-      >
+      <Card className="max-w-md w-full">
         <CardContent className="p-8 text-center">
           <div className="w-20 h-20 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <span className="text-4xl">🚫</span>
