@@ -196,7 +196,7 @@ export const mockProducts: DetailedProduct[] = [
   {
     id: 2,
     title: "SpeakFlow AI – The AI Sales Caller for Leads",
-    category: "Commercial Applications",
+    category: "Business Management Tools",
     tagline: "Let AI talk to your leads — book meetings, qualify prospects, and grow your sales while you sleep.",
     description: "SpeakFlow AI is a revolutionary SaaS that replaces traditional sales calling teams with intelligent AI voice agents. It automatically calls, speaks, and qualifies leads in real time using human-like natural voices that adapt tone, emotion, and language.",
     author: "Boostmysites",
@@ -349,7 +349,7 @@ export const mockProducts: DetailedProduct[] = [
   {
     id: 3,
     title: "LoveAI – The AI Partner that Evolves with You",
-    category: "Commercial Applications",
+    category: "Business Management Tools",
     tagline: "Your emotional companion. Your listener. Your ideal partner — powered by AI.",
     description: "LoveAI is an emotionally intelligent AI companion app designed to grow with the user — learning their tone, habits, lifestyle, and emotional needs over time. It acts as a friend, partner, or confidant, capable of holding deep conversations, sending personalized voice notes, remembering shared memories, and evolving into a truly custom emotional match.",
     author: "Boostmysites",
