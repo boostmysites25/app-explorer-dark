@@ -1245,7 +1245,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Instantly capture, qualify, and organize inbound sales leads from WhatsApp and Instagram DMs using human-like AI.",
     description: "AI Lead Qualifier is a micro-SaaS platform that seamlessly integrates with WhatsApp Web and Instagram DMs to instantly capture, qualify, and organize inbound sales leads. Using human-like AI, it tags leads as hot, warm, or cold, sends personalized follow-up messages, and automatically syncs all conversation data into Google Sheets or the user's CRM.",
     author: "Boostmysites",
-    image: "/assets/projects/AutoAdGen-1.webp",
+    image: "/assets/projects/AutoAdGen-2.webp",
     images: [
       "/assets/projects/AutoAdGen-1.webp",
       "/assets/projects/AutoAdGen-2.webp",
@@ -1381,7 +1381,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Turn client needs into comprehensive, branded proposals in 30 seconds — powered by AI.",
     description: "AI Proposal Generator is a specialized SaaS platform designed for professional service agencies (Marketing, Web Dev, Design, Real Estate). It eliminates the time-sink of proposal writing by using AI to instantly generate comprehensive, custom sales documents. Users simply input the client's needs and select services; the platform automatically produces branded proposal PDFs, detailed quotation sheets, and even placeholder Figma mockups or case studies, all within 30 seconds.",
     author: "Boostmysites",
-    image: "/assets/projects/DreamLife AI-1.webp",
+    image: "/assets/projects/DreamLife AI-2.webp",
     images: [
       "/assets/projects/DreamLife AI-1.webp",
       "/assets/projects/DreamLife AI-2.webp",
@@ -1516,7 +1516,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Streamline micro-influencer campaigns with automated tracking, reminders, and content approval workflows.",
     description: "The Micro-Influencer Contract Tracker is a focused SaaS platform designed for e-commerce brands and small marketing teams that work with large volumes of micro-influencers. It acts as a central hub for managing the end-to-end status of every collaboration. Key functions include tracking content deliverables, payment schedules, content approval workflows, and sending automated, timely reminders to influencers regarding deadlines, ensuring campaigns run smoothly and on schedule.",
     author: "Boostmysites",
-    image: "/assets/projects/ShopStream-1.webp",
+    image: "/assets/projects/ShopStream-2.webp",
     images: [
       "/assets/projects/ShopStream-1.webp",
       "/assets/projects/ShopStream-2.webp",
@@ -1651,7 +1651,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Automatically respond to all Google Business reviews with human-like AI, boosting your local SEO and reputation.",
     description: "AI Review Responder is a simple, high-utility SaaS tool for local service-based businesses (Spas, Clinics, Restaurants, Hotels, etc.). It connects directly to the client's Google Business Profile (GBP) and automatically drafts and posts human-like responses to all new reviews—positive, negative, and neutral—based on sentiment analysis and the user's defined brand voice. The platform ensures 100% response coverage, a critical factor for local search ranking, and delivers a concise weekly Reputation Report to the business owner.",
     author: "Boostmysites",
-    image: "/assets/projects/SpeakFlow AI-1.webp",
+    image: "/assets/projects/SpeakFlow AI-2.webp",
     images: [
       "/assets/projects/SpeakFlow AI-1.webp",
       "/assets/projects/SpeakFlow AI-2.webp",
@@ -1785,7 +1785,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Automatically transcribe, summarize, and extract action items from your WhatsApp business calls.",
     description: "AI Meeting Notes for WhatsApp Calls is a workflow automation SaaS designed for professionals (Coaches, Consultants, Sales Teams) who conduct business over WhatsApp voice or video calls. It uses a proprietary desktop application or integration method to securely capture the audio, transcribe it in real-time, generate concise summaries, and automatically pull out actionable tasks, decisions, and follow-up items. The final notes are delivered instantly to the user's dashboard and synced to their favorite task managers.",
     author: "Boostmysites",
-    image: "/assets/projects/LoveAI-1.webp",
+    image: "/assets/projects/LoveAI-2.webp",
     images: [
       "/assets/projects/LoveAI-1.webp",
       "/assets/projects/LoveAI-2.webp",
@@ -1918,7 +1918,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Automate property brochures, WhatsApp follow-ups, and lead management—all in one affordable platform for real estate agents.",
     description: "The Real Estate Agent Workflow Hub is a focused Micro-SaaS platform designed specifically for individual real estate agents and small broker teams. It targets the repetitive, high-touch administrative tasks that distract agents from selling. The tool combines essential marketing automation (brochure generation, automated follow-up) with critical sales tools (loan calculator, project comparison), providing an indispensable, affordable toolkit that simplifies daily operations and ensures no lead is neglected.",
     author: "Boostmysites",
-    image: "/assets/projects/DreamLife AI-1.webp",
+    image: "/assets/projects/DreamLife AI-2.webp",
     images: [
       "/assets/projects/DreamLife AI-1.webp",
       "/assets/projects/DreamLife AI-2.webp",
@@ -2053,7 +2053,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Never miss a client renewal again. Automate tracking, reminders, and billing for subscription renewals.",
     description: "Freelancer Renewal Tracker & Billing Assistant is a micro-SaaS specifically designed for the individual freelancer (web designers, developers, digital marketers) or small agency. It solves the chronic problem of missed client-side subscription renewals (domains, hosting, premium SaaS tools) and the corresponding delay in billing the client for that renewal work. The tool centralizes all renewal dates, automatically sends proactive reminders, generates the necessary invoice, and drafts the client renewal message, turning administrative chaos into predictable, recurring revenue.",
     author: "Boostmysites",
-    image: "/assets/projects/TradeMind AI-1r.webp",
+    image: "/assets/projects/TradeMind AI-2.webp",
     images: [
       "/assets/projects/TradeMind AI-1r.webp",
       "/assets/projects/TradeMind AI-2.webp",
@@ -2185,7 +2185,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Generate GST-compliant invoices and collect payments instantly via WhatsApp—built for micro-merchants in India and Southeast Asia.",
     description: "AI WhatsApp Invoice Generator is a Micro-SaaS platform built for small business owners, solo professionals (trainers, consultants), and micro-merchants in hyper-growth markets like India and Southeast Asia. It transforms the manual, complex process of generating compliant invoices and collecting payments into a one-click, conversational workflow. The tool automatically generates locally compliant (e.g., GST-ready in India) invoices, embeds secure payment links, and handles automated follow-up reminders directly via the highly-utilized WhatsApp Business API.",
     author: "Boostmysites",
-    image: "/assets/projects/ShopStream-1.webp",
+    image: "/assets/projects/ShopStream-2.webp",
     images: [
       "/assets/projects/ShopStream-1.webp",
       "/assets/projects/ShopStream-2.webp",
@@ -2317,7 +2317,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "Track employee attendance with a simple QR scan—no expensive hardware, no complex setup.",
     description: "Simple Employee Attendance SaaS using QR is a streamlined, cost-effective attendance tracking system built for small businesses like restaurants, gyms, and small offices with hourly or shift-based staff. It replaces unreliable paper sign-in sheets and expensive biometric scanners with a simple, contactless, and mobile-first solution. Employees use their own smartphones to scan a uniquely generated QR code displayed at the workplace entry/exit point. The data is instantly logged to a cloud dashboard, and managers can generate payroll-ready, clean PDF reports with one click.",
     author: "Boostmysites",
-    image: "/assets/projects/ReCircle-1.webp",
+    image: "/assets/projects/ReCircle-2.webp",
     images: [
       "/assets/projects/ReCircle-1.webp",
       "/assets/projects/ReCircle-2.webp",
@@ -2451,7 +2451,7 @@ export const mockProducts: DetailedProduct[] = [
     tagline: "From idea to live landing page in 5 minutes—AI-generated copy, design, and hosting included.",
     description: "The AI Landing Page Writer + Auto Publish is an ideal tool for entrepreneurs, founders, and small businesses looking to validate ideas instantly. Users input a business concept or product description, and the AI instantly generates high-converting, professionally structured landing page copy, complete with compelling headlines, features, and calls-to-action (CTAs). Crucially, the platform automatically handles the design, hosting, and publishing to a dedicated, hosted domain, allowing users to launch their idea and start collecting leads within minutes.",
     author: "Boostmysites",
-    image: "/assets/projects/RoomFit-1.webp",
+    image: "/assets/projects/RoomFit-2.webp",
     images: [
       "/assets/projects/RoomFit-1.webp",
       "/assets/projects/RoomFit-2.webp",
